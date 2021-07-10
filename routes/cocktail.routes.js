@@ -8,6 +8,7 @@ var router = express.Router();
 
 
 router.post('/cocktails/create', CocktailController.createCocktail);
+router.post('/cocktails/update/:id', CocktailController.updateCocktail);
 router.get('/cocktails/list', CocktailController.getCocktailsByCategory);
 router.get('/cocktails/search', CocktailController.getCocktailsByName);
 router.get('/cocktails/view/:id', CocktailController.getCocktail);

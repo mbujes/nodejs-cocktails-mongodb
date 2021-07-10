@@ -46,6 +46,18 @@ exports.getCocktailsByName = async function (req, res) {
   }
 }
 
+exports.updateCocktail = async function (req, res) {
+  const id = req.params.id;
+  try {
+    const cocktail = await Cocktail.updateOne({_id: id}, { ... req.body });
+    return res.status(200).json({
+      cocktail
+    });
+  } catch (err) {
+    return res.status(500).json({ error: err })
+  }
+}
+
 exports.deleteCocktail = async function (req, res) {
   const id = req.params.id;
   try {
