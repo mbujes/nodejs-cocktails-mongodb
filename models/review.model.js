@@ -3,14 +3,11 @@ var mongoose =  require('mongoose');
 // Usaremos los esquemas
 var Schema = mongoose.Schema;
 // Creamos el objeto del esquema y sus atributos
-var CocktailSchema = Schema({
+var ReviewSchema = Schema({
+    cocktailId: String,
     name: String,
-    instructions: String,
-    ingredients: String,
-    measures: String,
-    category: String,
-    glass: String,
-    image: String
+    message: String,
+    rating: String
 });
 // Exportamos el modelo para usarlo en otros ficheros
-module.exports = mongoose.model('Cocktail', CocktailSchema);
+module.exports = mongoose.model('Review', ReviewSchema);
