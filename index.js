@@ -9,13 +9,13 @@ mongoose.Promise = global.Promise;
 // Usamos el método connect para conectarnos a nuestra base de datos
 mongoose.connect('mongodb://localhost:27017/curso_mean_social',  { useMongoClient: true})
   .then(() => {
-      // Cuando se realiza la conexión, lanzamos este mensaje por consola
-      console.log("La conexión a la base de datos curso_mean_social se ha realizado correctamente")
-  
-      // CREAR EL SERVIDOR WEB CON NODEJS
-      app.listen(port, () => {
-          console.log("servidor corriendo en http://localhost:3300");
-      });
+    // Cuando se realiza la conexión, lanzamos este mensaje por consola
+    console.log("La conexión a la base de datos curso_mean_social se ha realizado correctamente")
+
+    // CREAR EL SERVIDOR WEB CON NODEJS
+    app.listen(port, () => {
+        console.log("servidor corriendo en http://localhost:3300");
+    });
   })
   // Si no se conecta correctamente escupimos el error
   .catch(err => console.log(err));
