@@ -6,11 +6,13 @@ var Schema = mongoose.Schema;
 var CocktailSchema = Schema({
     name: String,
     instructions: String,
-    ingredients: String,
-    measures: String,
+    ingredients: [String],
+    measures: [String],
     category: String,
+    alcoholic: Boolean,
     glass: String,
     image: String
 });
+
 // Exportamos el modelo para usarlo en otros ficheros
 module.exports = mongoose.model('Cocktail', CocktailSchema);

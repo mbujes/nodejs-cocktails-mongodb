@@ -4,10 +4,10 @@ var mongoose =  require('mongoose');
 var Schema = mongoose.Schema;
 // Creamos el objeto del esquema y sus atributos
 var ReviewSchema = Schema({
-    cocktailId: String,
+    cocktailId: Schema.Types.ObjectId,
     name: String,
     message: String,
-    rating: String
+    rating: Number
 });
 // Exportamos el modelo para usarlo en otros ficheros
 module.exports = mongoose.model('Review', ReviewSchema);

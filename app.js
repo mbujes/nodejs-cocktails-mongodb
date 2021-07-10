@@ -1,11 +1,14 @@
-// Cargamos los módulos de express y body-parser
+// Cargamos los módulos de express, cors y body-parser
 var express = require('express');
+var cors = require('cors')
 var bodyParser = require('body-parser');
 // Llamamos a express para poder crear el servidor
 var app = express();
 // Importamos las rutas
 var cocktail_routes = require('./routes/cocktail.routes'); 
+
 //cargar middlewares
+app.use(cors());
 //un metodo que se ejecuta antes que llegue a un controlador
 //Configuramos bodyParser para que convierta el body de nuestras peticiones a JSON
 app.use(bodyParser.urlencoded({extended:false}));
