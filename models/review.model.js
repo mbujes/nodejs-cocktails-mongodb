@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var ReviewSchema = Schema({
     cocktailId: Schema.Types.ObjectId,
     name: String,
-    message: String,
+    text: String,
     rating: Number
 });
 // Exportamos el modelo para usarlo en otros ficheros

@@ -11,7 +11,7 @@ router.post('/cocktails/create', CocktailController.createCocktail);
 router.get('/cocktails/list', CocktailController.getCocktailsByCategory);
 router.get('/cocktails/search', CocktailController.getCocktailsByName);
 router.get('/cocktails/view/:id', CocktailController.getCocktail);
-
+router.get('/cocktails/delete/:id', CocktailController.deleteCocktail);
 
 // Exportamos la configuración
 module.exports = router;
