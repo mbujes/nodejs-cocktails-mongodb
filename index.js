@@ -7,10 +7,10 @@ var port = 3300;
 // Le indicamos a Mongoose que haremos la conexión con Promesas
 mongoose.Promise = global.Promise;
 // Usamos el método connect para conectarnos a nuestra base de datos
-mongoose.connect('mongodb://localhost:27017/curso_mean_social',  { useMongoClient: true})
+mongoose.connect('mongodb+srv://cocktail-app-user:tacVA5ORGJoKDs3b@cluster0.hdtbh.mongodb.net/cocktail-app?retryWrites=true&w=majority')
   .then(() => {
     // Cuando se realiza la conexión, lanzamos este mensaje por consola
-    console.log("La conexión a la base de datos curso_mean_social se ha realizado correctamente")
+    console.log("La conexión a la base de datos cocktail-app se ha realizado correctamente")
 
     // CREAR EL SERVIDOR WEB CON NODEJS
     app.listen(port, () => {
