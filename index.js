@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 // *Cargamos el fichero app.js con la configuración de Express
 var app = require('./app');
 // Creamos la variable PORT para indicar el puerto en el que va a funcionar el servidor
-var port = 3300;
+var port = process.env.PORT || 80;
 // Le indicamos a Mongoose que haremos la conexión con Promesas
 mongoose.Promise = global.Promise;
 // Usamos el método connect para conectarnos a nuestra base de datos
@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://cocktail-app-user:tacVA5ORGJoKDs3b@cluster0.hdtb
 
     // CREAR EL SERVIDOR WEB CON NODEJS
     app.listen(port, () => {
-        console.log("servidor corriendo en http://localhost:3300");
+        console.log("servidor corriendo");
     });
   })
   // Si no se conecta correctamente escupimos el error
